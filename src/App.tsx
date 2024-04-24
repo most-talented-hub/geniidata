@@ -4,7 +4,6 @@ import Navbar from "./components/navbar";
 import ConnectWallet, {
   ConnectedWalletParams,
 } from "./components/connect-dialog";
-import AssetsDialog from "./components/transaction-dialog/send-asset-dialog";
 import { useState } from "react";
 import { WalletID } from "./components/connect-dialog/connectWallets";
 import Alert, { AlertInfo } from "./components/alerts";
@@ -38,7 +37,7 @@ function App() {
     id,
     address,
     publicKey,
-    signature
+    signature,
   ) => {
     setOpenWallet(false);
     setConnectedWallet({
@@ -88,6 +87,7 @@ function App() {
         open={openAsset}
         closeModal={() => setOpenAsset(false)}
         message="Send Asset Dialog"
+        address={connectedWallet.address.toString()}
       />
       <div className="page-alerts">
         {alerts.map((alert) => (

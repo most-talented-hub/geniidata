@@ -40,7 +40,7 @@ export type ConnectedWalletParams = (
   wallet: WalletID,
   address: string,
   publicKey: string,
-  signature: string
+  signature: string,
 ) => void;
 
 interface ConnectWalletProps {
@@ -69,6 +69,7 @@ export default function ConnectWallet({
       setLoadingWallets((prev) => [...prev, id]);
       const result = await callback();
       if (result.type === "success") {
+
         const signResponse = await handleSignMessage(
           id,
           result.address,
@@ -79,7 +80,7 @@ export default function ConnectWallet({
             id,
             result.address,
             result.publicKey,
-            signResponse.signature
+            signResponse.signature,
           );
         } else {
           // console.log(signResponse.message);

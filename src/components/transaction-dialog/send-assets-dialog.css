@@ -84,8 +84,7 @@
 
 .second {
     width: 700px;
-    height: 500px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .second .title {
@@ -122,7 +121,7 @@
 }
 
 .line img {
-    width: 30%;
+    width: 15%;
 }
 
 .line {
@@ -134,4 +133,16 @@
 
 button {
     color: white;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-button {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    color: #c49031;
+    cursor: pointer;
 }

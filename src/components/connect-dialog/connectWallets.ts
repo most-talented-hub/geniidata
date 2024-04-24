@@ -43,6 +43,7 @@ async function connectUnisatWallet() {
       console.log("Public Key: ", publicKey);
     }
     console.log("UNISAT WALLETS: ", accounts);
+
     return {
       type: "success",
       address,

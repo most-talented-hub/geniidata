@@ -47,7 +47,6 @@ function GasPopover() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(`https://mempool.space/api/v1/fees/recommended`);
-        console.log(data);
         setHalfHourFee(data.halfHourFee);
       } catch (error) {
         console.log("Server responded with:", error);
@@ -306,18 +305,18 @@ function SideNav({ open }: SideNavProps) {
     >
       <div className="wrapper">
         <div className="menu-links">
-          <MenuItem text="Discover" />
-          <MenuItem text="Profile" />
-          <MenuItem text="Inscriptions" />
-          <MenuItem text="Index" />
-          <MenuItem text="Mint" />
-          <MenuItem text="Rewards" />
-          <MenuItem text="About" />
-          <MenuItem text="Documentation" />
+          <MenuItem text="Discover" to="" />
+          <MenuItem text="Portfolio" to="" />
+          <MenuItem text="Inscriptions" to="" />
+          <MenuItem text="Index" to="" />
+          <MenuItem text="Mint" to="" />
+          <MenuItem text="Rewards" to="" />
+          <MenuItem text="About" to="" />
+          <MenuItem text="Documentation" to="" />
         </div>
 
         <MenuControlToggle text="Dark Mode" />
-        <MenuItem text="Install Our App" />
+        <MenuItem text="Install Our App" to="" />
       </div>
     </aside>
   );
@@ -374,7 +373,7 @@ export default function Navbar({
         </form>
         <div className="nav-links">
           <NavItem text="Discover" to="https://geniidata.com/ordinals/home" />
-          <NavItem text="Profile" to="https://geniidata.com/ordinals/profile" />
+          <NavItem text="Portfolio" to="https://geniidata.com/ordinals/profile" />
           <NavItem text="Inscriptions" to="https://geniidata.com/ordinals/inscriptions" />
           <NavItem text="Index" to="https://geniidata.com/ordinals/index/collection" />
           <NavItem text="Mint" to="https://geniidata.com/ordinals/inscribe" />
